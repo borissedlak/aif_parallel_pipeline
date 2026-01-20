@@ -20,6 +20,9 @@ class DetectionYOLOImageProcessor(YOLOTaskProcessor):
             confidences: How confident the YOLO Model is in correctly identifying the object (0.0-1.0)
         """
 
+        if not image.flags.writeable:
+            image = image.copy()
+        
         for xyxy, class_id, confidence in zip(boxes, class_ids, confidences):
             x1, y1, x2, y2 = np.intp(xyxy)
 
