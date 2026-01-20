@@ -36,3 +36,6 @@ build/
 dist/
 .eggs/
 *.egg-info/
+
+# The paper
+Bachelor_s_Thesis___TU_Wien.pdf
